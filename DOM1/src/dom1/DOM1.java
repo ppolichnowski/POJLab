@@ -15,6 +15,7 @@ public class DOM1 {
      */
     public static void main(String[] args) {
         System.out.println("Hello World");
+        System.out.println("Zmiana");
         // TODO code application logic here
     }
     
