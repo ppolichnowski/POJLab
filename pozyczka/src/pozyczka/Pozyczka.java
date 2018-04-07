@@ -7,6 +7,7 @@ package pozyczka;
 
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.HashSet;
 /**
  *
  * @author Phantom
@@ -35,8 +36,20 @@ public class Pozyczka {
      appl.setFirstName(firstName);
      System.out.println(appl);
      
+     String surName = "Kota";
+     appl.setSurName(surName);
+     System.out.println(appl);
+     
      String pesel = "12345678901";
      appl.setPesel(pesel);
+     System.out.println(appl);
+     
+     String nip = "123987456";
+     appl.setNip(nip);
+     System.out.println(appl);
+     
+     String bankAccountNumber = "4056000000001234";
+     appl.setBankAccountNumber(bankAccountNumber);
      System.out.println(appl);
      
      String gender = "K";
