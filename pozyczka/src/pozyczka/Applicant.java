@@ -56,5 +56,82 @@ public void setFirstName(String firstName){
         System.out.println("First Name Error: " + firstName);
 }
 
+public String getSurName() {
+    return surName;
+}
+
+public void setSurName(String surName) {
+    if (checkName(surName))
+        this.surName = surName;
+    else
+        System.out.println("Surname Error: " + surName);
+}
+
+public String getPesel() {
+    return pesel;
+}
+
+public void setPesel(String pesel) {
+    if(new PeselValidator(pesel).isValid())
+        this.pesel = pesel;
+    else
+        System.out.println("PESEL Error: " + pesel);
+}
+
+public String getNip() {
+    return nip;
+}
+
+public void setNip(String nip) {
+    this.nip = nip;
+}
+
+public String getBankAccountNumber() {
+    return bankAccountNumber;
+}
+
+public void setBankAccountNumber(String bankAccountNumber) {
+    this.bankAccountNumber = bankAccountNumber;
+}
+
+public String getGender(){
+    return gender;
+}
+
+public void setGender(String gender) {
+    boolean setDone = false;
+    if(this.pesel != null) {
+        PeselValidator pv = new PeselValidator(this.pesel);
+        if(pv.isValid())
+            if(!pv.getSex().equals("E") && pv.getSex().equals(gender)) {
+                this.gender = pv.getSex();
+                setDone = true;
+            }
+    }
+    if (!setDone)
+        System.out.println("Gender Error: " + gender);
+}
+
+public Date getDateOfBirth() {
+    return dateOfBirth;
+}
+
+public void setDateOfBirth(Date dateOfBirth) {
+    this.dateOfBirth = dateOfBirth;
+}
+
+@Override
+public String toString() {
+    return "Applicant [firstName=" + firstName + ", Surname=" + surName + ", PESEL=" + pesel + ", NIP=" + nip + ", bankAccountNumber=" + bankAccountNumber + ", Gender=" + gender + ", DateOfBirth=" + (dateOfBirth == null ? "null" : new SimpleDateFormat("yyyy-M-dd").format(dateOfBirth)) + "]";
+}
+
+static private boolean validatePattern(String valData, String patternString) {
+    Pattern pattern = Pattern.compile(patternString);
+    Matcher matcher = pattern.matcher(valData);
+    if(!matcher.matches())
+        return false;
+    else
+        return true;
+}
 
 }
