@@ -19,8 +19,10 @@
 *.rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+.viminfo
 hs_err_pid*
 /DOM1/nbproject/private/
 /DOM1/build/
 /JavaMarkt/nbproject/private/
 /JavaMarkt/build/
+/pozyczka/nbproject/private/
