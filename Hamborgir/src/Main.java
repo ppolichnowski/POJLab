@@ -19,7 +19,7 @@ public static void main(String[] args)
     System.out.println("[2] 3Burger Gdansk");
     System.out.println("[3] Surfburger Gdansk Glowny");
     System.out.println("===============================================");
-    System.out.println("[n] Wyjdź");
+    System.out.println("[4-0] Wyjdź");
 
     Scanner sc = new Scanner(System.in);
     opt = sc.nextInt();
@@ -49,7 +49,7 @@ public static void main(String[] args)
         System.out.println("[2] Cheeseburger");
         System.out.println("[3] Burger Szefa");
         System.out.println("===============================================");
-        System.out.println("[n] Zakończ");
+        System.out.println("[4-0] Zakończ");
 
         opt = sc.nextInt();
 
@@ -67,7 +67,7 @@ public static void main(String[] args)
         System.out.println("[2] XL");
         System.out.println("[3] 2 x XL");
         System.out.println("===============================================");
-        System.out.println("[n] Zakończ");
+        System.out.println("[4-0] Zakończ");
 
         opt = sc.nextInt();
 
@@ -85,7 +85,7 @@ public static void main(String[] args)
         System.out.println("[2] Wynos");
         System.out.println("[3] Dowóz");
         System.out.println("===============================================");
-        System.out.println("[n] Zakończ");
+        System.out.println("[4-0] Zakończ");
 
         opt = sc.nextInt();
 
@@ -103,7 +103,7 @@ public static void main(String[] args)
         System.out.println("===============================================");
         System.out.println("Czy chcesz coś więcej?");
         System.out.println("[1] Tak, poproszę kolejnego");
-        System.out.println("[n] Nie, dziękuję");
+        System.out.println("[2-0] Nie, dziękuję");
 
         opt = sc.nextInt();
 
